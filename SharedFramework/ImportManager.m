@@ -8,7 +8,6 @@
 
 #import "ImportManager.h"
 #import "DataManager.h"
-#import "ApplicationProperties.h"
 
 @implementation ImportManager
 

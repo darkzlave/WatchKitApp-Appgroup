@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		D91CF1F31AF3E8DB00692BD5 /* Event.h in Headers */ = {isa = PBXBuildFile; fileRef = D91CF1F11AF3E8DB00692BD5 /* Event.h */; };
 		D91CF1F41AF3E8DB00692BD5 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = D91CF1F21AF3E8DB00692BD5 /* Event.m */; };
+		D91CF1FB1AF3EEF400692BD5 /* MigrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D91CF1F91AF3EEF400692BD5 /* MigrationViewController.m */; };
+		D91CF1FC1AF3EEF400692BD5 /* MigrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D91CF1FA1AF3EEF400692BD5 /* MigrationViewController.xib */; };
 		D9439FEC1AF3D1C60017F9FD /* ApplicationProperties.h in Headers */ = {isa = PBXBuildFile; fileRef = D9439FEB1AF3D1440017F9FD /* ApplicationProperties.h */; };
 		D9439FF31AF3D8060017F9FD /* ImportManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D9439FF11AF3D8060017F9FD /* ImportManager.h */; };
 		D9439FF41AF3D8060017F9FD /* ImportManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D9439FF21AF3D8060017F9FD /* ImportManager.m */; };
@@ -116,6 +118,10 @@
 /* Begin PBXFileReference section */
 		D91CF1F11AF3E8DB00692BD5 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
 		D91CF1F21AF3E8DB00692BD5 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		D91CF1F81AF3EEF400692BD5 /* MigrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MigrationViewController.h; sourceTree = "<group>"; };
+		D91CF1F91AF3EEF400692BD5 /* MigrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MigrationViewController.m; sourceTree = "<group>"; };
+		D91CF1FA1AF3EEF400692BD5 /* MigrationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MigrationViewController.xib; sourceTree = "<group>"; };
+		D91CF1FD1AF3F1D900692BD5 /* Appgroup-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Appgroup-PrefixHeader.pch"; sourceTree = "<group>"; };
 		D9439FEB1AF3D1440017F9FD /* ApplicationProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplicationProperties.h; sourceTree = "<group>"; };
 		D9439FF11AF3D8060017F9FD /* ImportManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImportManager.h; sourceTree = "<group>"; };
 		D9439FF21AF3D8060017F9FD /* ImportManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImportManager.m; sourceTree = "<group>"; };
@@ -235,9 +241,11 @@
 		D9B8E0EA1ADBA31C00452958 /* AppgroupExample */ = {
 			isa = PBXGroup;
 			children = (
-				D9B8E1771ADBB8FC00452958 /* AppgroupExample.entitlements */,
 				D9B8E0EF1ADBA31C00452958 /* AppDelegate.h */,
 				D9B8E0F01ADBA31C00452958 /* AppDelegate.m */,
+				D91CF1F81AF3EEF400692BD5 /* MigrationViewController.h */,
+				D91CF1F91AF3EEF400692BD5 /* MigrationViewController.m */,
+				D91CF1FA1AF3EEF400692BD5 /* MigrationViewController.xib */,
 				D9B8E0F51ADBA31C00452958 /* MasterViewController.h */,
 				D9B8E0F61ADBA31C00452958 /* MasterViewController.m */,
 				D9B8E0F81ADBA31C00452958 /* DetailViewController.h */,
@@ -254,9 +262,11 @@
 		D9B8E0EB1ADBA31C00452958 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D9B8E1771ADBB8FC00452958 /* AppgroupExample.entitlements */,
 				D9439FF51AF3E2830017F9FD /* Database.sqlite */,
 				D9B8E0EC1ADBA31C00452958 /* Info.plist */,
 				D9B8E0ED1ADBA31C00452958 /* main.m */,
+				D91CF1FD1AF3F1D900692BD5 /* Appgroup-PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -567,6 +577,7 @@
 				D9B8E0FD1ADBA31D00452958 /* Main.storyboard in Resources */,
 				D9B8E1021ADBA31D00452958 /* LaunchScreen.xib in Resources */,
 				D9B8E0FF1ADBA31D00452958 /* Images.xcassets in Resources */,
+				D91CF1FC1AF3EEF400692BD5 /* MigrationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,6 +628,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9B8E0FA1ADBA31C00452958 /* DetailViewController.m in Sources */,
+				D91CF1FB1AF3EEF400692BD5 /* MigrationViewController.m in Sources */,
 				D9B8E0F71ADBA31C00452958 /* MasterViewController.m in Sources */,
 				D9B8E0F11ADBA31C00452958 /* AppDelegate.m in Sources */,
 				D9B8E0F41ADBA31C00452958 /* AppgroupExample.xcdatamodeld in Sources */,
@@ -808,6 +820,7 @@
 				CODE_SIGN_ENTITLEMENTS = AppgroupExample/AppgroupExample.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREFIX_HEADER = "AppgroupExample/Appgroup-PrefixHeader.pch";
 				INFOPLIST_FILE = AppgroupExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -822,6 +835,7 @@
 				CODE_SIGN_ENTITLEMENTS = AppgroupExample/AppgroupExample.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREFIX_HEADER = "AppgroupExample/Appgroup-PrefixHeader.pch";
 				INFOPLIST_FILE = AppgroupExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -934,6 +948,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "AppgroupExample/Appgroup-PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -958,6 +973,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "AppgroupExample/Appgroup-PrefixHeader.pch";
 				INFOPLIST_FILE = SharedFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

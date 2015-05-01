@@ -7,8 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "DetailViewController.h"
-#import "MasterViewController.h"
+#import "MigrationViewController.h"
 #import "DataManager.h"
 @interface AppDelegate ()
 
@@ -19,8 +18,30 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.tintColor = APP_PURPLE;
+    // Check if we need to do a data migration
+    if ([DataManager needsToApplyMigration]) {
+        MigrationViewController *importViewController = [[MigrationViewController alloc] initWithApplication:application
+                                                                                                               launchOptions:launchOptions];
+        [self.window setRootViewController:importViewController];
+        [self.window makeKeyAndVisible];
+        return YES;
+    }
+    else {
+        return [self finishLaunchingWithApplication:application withOptions:launchOptions];
+    }
+}
+
+- (BOOL)finishLaunchingWithApplication:(UIApplication *)application withOptions:(NSDictionary *)launchOptions
+{
     //Start core data stack
     [DataManager sharedDataManager];
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIViewController *mainController = storyboard.instantiateInitialViewController;
+    [self.window setRootViewController:mainController];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

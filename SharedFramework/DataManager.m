@@ -7,7 +7,6 @@
 //
 
 #import "DataManager.h"
-#import "ApplicationProperties.h"
 #import "ImportManager.h"
 
 @implementation DataManager
@@ -227,8 +226,8 @@ static dispatch_once_t onceToken;
 #pragma mark - Migration
 + (BOOL)needsToApplyMigration
 {
-    if(IS_IOS8){
-        NSURL *oldURL = [NSURL fileURLWithPath:[self applicationDocumentsDirectory]];
+    if(RUNNING_ON_APPGROUP){
+        NSURL *oldURL = [NSURL fileURLWithPath:[self applicationDocumentsDatabasePath]];
         BOOL fileAtOldPath = [[NSFileManager defaultManager] fileExistsAtPath:[oldURL path]];
         if(fileAtOldPath){
             return YES;
