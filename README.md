@@ -2,7 +2,7 @@
 
 This is a follow up on my comments at ["WatchKit Mistakes"](http://realm.io/news/more-watchkit-mistakes/) thanks to  the guys at [Realm.io] (http://realm.io/) for the feature!
 
-On my post I talk a bit on our mistakes at ["Lifesum"] (http://lifesum.com), when we did the first lunch of our Watch App, the biggest of them was moving our database from the usual Application Documents Folder to the new Appgroup Shared Folders.
+On my post I talk a bit on our mistakes at [Lifesum] (http://lifesum.com), when we did the first lunch of our Watch App, the biggest of them was moving our database from the usual Application Documents Folder to the new Appgroup Shared Folders.
 
 Even through we manage to cover most of the cases on the migration, some users on old devices (iPhone 4S) had problems with the delay and the app ended up not lunching at all.
 
