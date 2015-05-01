@@ -13,6 +13,6 @@ I this repository I have tried to cover most of the things you need to do to set
 - Syncing data through Darwin Notifications
 
 ## Setup
-1 - Make sure to add your own Bundle Identifier and setup your own AppGroup ID through Xcode Capabilities
-2 - Modify ApplicationProperties.h/APP_GROUP_ID with your own ID
-3 - Modify ApplicationProperties.h/RUNNING_ON_APPGROUP macro if you want to test migrations.
+1. Make sure to add your own Bundle Identifier and enable your own AppGroup ID through Xcode Capabilities
+2. Modify ApplicationProperties.h/APP_GROUP_ID with your own ID
+3. Modify ApplicationProperties.h/RUNNING_ON_APPGROUP macro if you want to test migrations.
